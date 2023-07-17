@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bookingcss.css">
+    <title>Document</title>
+</head>
+<body >
+    <div id="bookingform">
+        <button id="cancel" onclick="dispalynon()"></button>
+    <form action="https://formspree.io/f/xyyqydbl" method="POST" id="form">
+        <label for="name">Name</label>
+        <input type="text" name="Name" id="name" required></p>
+        
+        <label for="email">Email</label>
+        <input type="email" name="email addres" id="email" required></p>
+        
+        <label for="phonenumber">Enter you phonenumber</label>
+        <input type="text" name="phonenumber" id="phonenumber" required></p>
+
+        <label for="Moviename">Movie name</label>
+
+        <input type="text" name="Movie name" id="Moviename"></p>
+      <label for="numbertik">Number of tickets</label>
+      <input type="number" name="Number of ticket" id="numbertik"></p>
+
+        <button type="submit" id="submit" onclick="oad()">BOOK ticket</button>
+    </form>
+    </div>
+
+    <div id="spaceing">
+        <div id="image"></div>
+    </div>
+    <div id="theaterdiv">
+    <div id="theater1">
+         <label for="">PVRV RK Cineplex</p></label>
+         <button name="button" onclick="remove()">9:00pm</button>
+         <button name="button" onclick="remove()">4:30pm</button>
+      </div>
+   <div id="theater2">
+    <label for="">BVK Multiplex </p></label>
+    <button name="button" onclick="remove()">7:00pm</button>
+    <button name="button" onclick="remove()">10:pm</button>
+     </div>
+</div>
+<div id="chaild1">
+    <img id="iner" src="./ava4.jpg">
+    <input type="text" value="Avatar 2"  readonly >
+    <input type="text" value=9:30 readonly>
+    <button onclick="none()">cancel ticket</button>
+</div>
+ 
+</body>
+<script>
+  
+    function remove()
+    {
+        var inputvalue="Avatar 2";
+        var bookingformremove=document.getElementById("bookingform");
+        var Moviename=document.getElementById("Moviename");
+        bookingformremove.style.display="block";
+        Moviename.value=inputvalue;
+    }
+    function dispalynon(){
+        var bookingformremove=document.getElementById("bookingform");
+        bookingformremove.style.display="none";
+    }
+    function oad(){
+        
+        var divcontent= document.getElementById("chaild1").innerHTML
+        localStorage.setItem('divcontent',divcontent);
+        add
+      
+       }   
+</script>
+
+</html>

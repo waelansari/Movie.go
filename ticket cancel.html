@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bookingcss.css">
+    <title>canceling tickets</title>
+</head>
+<body>
+    <div id="yourbookings">
+        <h1>your bookings</h1>
+    </div>
+    <div id="parentcon">
+       
+        
+    </div>
+    
+</body>
+<script src="javaforall.js"></script>
+<script>
+
+     var storge=localStorage.getItem('divcontent');
+     var div=document.getElementById("parentcon");
+     div.innerHTML= storge;
+    var emty="emty";
+
+   function none(){
+     div.innerHTML=emty;
+     localStorage.clear();
+   }
+</script>
+</html>
